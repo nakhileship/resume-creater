@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="builders.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+crossorigin="anonymous" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body  class="main">
+
+<div class="container p-10 ">
+    
+        <h1>Resume Builders</h1>
+    <hr>
+</div>
+<br>
+<div class="container">
+
+    <form class="row g-3" action="">
+        <h3>Personal Details</h3> <hr>
+	<div class="col-md-6">
+        <label for="name"> <strong>Name: </strong></label>
+        <input class="form-control" type="text"id="name" name="Name" placeholder="First Name">
+    </div>
+    <div class="col-md-6">
+        <label for="lname"> <strong>Last name: </strong></label>
+        <input class="form-control" type="text"id="lname" name="lastname" placeholder="Last Name">
+    </div>
+    <div class=" form-inline">
+        <label for="phone"> <strong>Phone: </strong></label>
+        <input class="form-control" type="number"id="phone" name="phone" placeholder="Phone number">
+    </div>
+    <div class="col-md-12">
+        <label for="email" class="form-label"><strong>Email:</strong> </label>
+        <input type="email" class="form-control" id="email" name="Email" placeholder="enter profational email">
+      </div>
+    <br><br><br>
+  
+    <h3>Education Details </h3>
+    <div class="col-md-6 ">
+        <select onclick="educchanger()" id="dropdownedu" name="role" required>
+            <option disabled selected value>
+                 Select cources
+            </option>
+            <option value="Diploma">
+                 Diploma
+            </option>
+            <option value="tenth">
+                 10th
+            </option>
+            <option value="plues2">
+                 +2
+            </option>
+        </select>
+    </div>
+
+<div  id="educ1" style="display: None;">
+    <label class="mb-2 mr-sm-2" id="name-label"><strong>College:</strong></label>
+    <input type="text" id="edu1cname" name="name" class="form-control mb-2 mr-sm-2 " required
+         placeholder="Enter your college"><br>
+
+    <label class="mb-2 mr-sm-2" id="email-label"><strong>Examination Board:</strong></label>
+    <input type="text" id="edu1exam" name="email" class="form-control mb-2 mr-sm-2" required
+         placeholder="Enter examination board"><br>
+
+    <label class="mb-2 mr-sm-2" id="name-label"><strong>GPA:</strong></label>
+    <input type="text" id="edu1gpa" name="name" class="form-control mb-2 mr-sm-2" required
+         placeholder="Enter CGPA"><br>
+
+</div>
+<div id="educ2" style="display: None;">
+    <label class="mb-2 mr-sm-2" id="name-label"><strong>College:</strong></label>
+    <input type="text" id="edu2cname" name="name" class="form-control mb-2 mr-sm-2" required
+         placeholder="Enter your college"><br>
+
+    <label class="mb-2 mr-sm-2" id="email-label"><strong>Examination Board:</strong></label>
+    <input type="text" id="edu2exam" name="email" class="form-control mb-2 mr-sm-2" required
+         placeholder="Enter examination board"><br>
+
+    <label class="mb-2 mr-sm-2" id="name-label"><strong>GPA:</strong></label>
+    <input type="text" id="edu2gpa" name="name" class="form-control mb-2 mr-sm-2" required
+         placeholder="Enter CGPA"><br>
+
+</div>
+<div id="educ3" style="display: None;">
+    <label class="mb-2 mr-sm-2" id="name-label"><strong>College:</strong></label>
+    <input type="text" id="edu3cname" name="name" class="form-control mb-2 mr-sm-2" required
+         placeholder="Enter your college"><br>
+
+    <label class="mb-2 mr-sm-2" id="email-label"><strong>Examination Board:</strong></label>
+    <input type="text" id="edu3exam" name="email" class="form-control mb-2 mr-sm-2" required
+         placeholder="Enter examination board"><br>
+
+    <label class="mb-2 mr-sm-2" id="name-label"><strong>GPA</strong></label>
+    <input type="text" id="edu3gpa" name="name" class="form-control mb-2 mr-sm-2" required
+         placeholder="Enter CGPA"><br>
+
+</div>
+     <br><br><br>
+
+        <h3>Experience details</h3><hr>
+        
+           <div class="col-md-12">
+               <label class="mb-2 mr-sm-2" for="company"> <strong>Company: </strong></label>
+               <input class="form-control" type="text"id="company" name="company" placeholder="Enter company name">
+           </div>
+           <div class="col-md-12">
+               <label class="mb-2 mr-sm-2" for="designation"> <strong>Designation: </strong></label>
+               <input class="form-control" type="text"id="designation" name="designation" placeholder="Enter Designation ">
+           </div>
+           <div class="col-md-6">
+               <label class="mb-2 mr-sm-2" for="start"> <strong>Start date: </strong></label>
+               <input class="form-control" type="date"id="start" name="startdate" >
+           </div>
+           <div class="col-md-6">
+               <label class="mb-2 mr-sm-2" for="end"> <strong>End date: </strong></label>
+               <input class="form-control" type="date"id="end" name="enddate" >
+           </div>
+           <div class="col-md-12">
+            <label class="mb-2 mr-sm-2" for="location"> <strong>Location: </strong></label>
+            <input class="form-control" type="text"id="location" name="location" placeholder="Enter location">
+          </div>
+          <div>
+            <label class="mb-2 mr-sm-2" for="description"><strong>Description:</strong></label>
+            <textarea class="form-control" rows="3" id="dscription" name="text"></textarea>
+          </div>
+   
+        </form>
+        <br><br>
+        <h3></h3>
+   
+</div>
+
+<script>
+    function educchanger() {
+        var sl = document.getElementById("dropdownedu").selectedIndex;
+        console.log('hllo');
+        if (sl == 1) {
+            document.getElementById("educ2").style.display = "None";
+            document.getElementById("educ1").style.display = "block";
+            document.getElementById("educ3").style.display = "None";
+        }
+        if (sl == 2) {
+            document.getElementById("educ1").style.display = "None";
+            document.getElementById("educ3").style.display = "None";
+            document.getElementById("educ2").style.display = "block";
+        }
+        if (sl == 3) {
+            document.getElementById("educ1").style.display = "None";
+            document.getElementById("educ2").style.display = "None";
+            document.getElementById("educ3").style.display = "block";
+        }
+
+    }
+
+    function expchange() {
+        var sl = document.getElementById("dropdownexp").selectedIndex;
+        console.log('hllo');
+        if (sl == 1) {
+            document.getElementById("exp2").style.display = "None";
+            document.getElementById("exp1").style.display = "block";
+            document.getElementById("exp3").style.display = "None";
+        }
+        if (sl == 2) {
+            document.getElementById("exp1").style.display = "None";
+            document.getElementById("exp3").style.display = "None";
+            document.getElementById("exp2").style.display = "block";
+        }
+        if (sl == 3) {
+            document.getElementById("exp1").style.display = "None";
+            document.getElementById("exp2").style.display = "None";
+            document.getElementById("exp3").style.display = "block";
+        }
+
+    }
+
+    function pdfgenrate() {
+        var fname = document.getElementById("fname").value;
+        var lname = document.getElementById("lname").value;
+        var email = document.getElementById("email").value;
+        var phonno = document.getElementById("phonno").value;
+        var age = document.getElementById("age").value;
+        var genderredio = document.getElementById("gender");
+        var gender;
+        for (i = 0; i < genderredio.length; i++) {
+            if (genderredio[i].checked)
+                gender = genderredio[i].value;
+        }
+        console.log(fname, lname, email, phonno, age, gender)
+        var edu1cname = document.getElementById("edu1cname").value;
+        var edu1exam = document.getElementById("edu1exam").value;
+        var educ1gpa = document.getElementById("edu1gpa").value;
+
+        var edu2cname = document.getElementById("edu2cname").value;
+        var edu2exam = document.getElementById("edu2exam").value;
+        var edu2gpa = document.getElementById("edu2gpa").value;
+
+
+        var edu3cname = document.getElementById("edu3cname").value;
+        var edu3exam = document.getElementById("edu3exam").value;
+        var edu3gpa = document.getElementById("edu3gpa").value;
+
+
+        var exp1com = document.getElementById("exp1com").value;
+        var exp1loc = document.getElementById("exp1loc").value;
+        var exp1year = document.getElementById("exp1year").value;
+
+        var exp2com = document.getElementById("exp2com").value;
+        var exp2loc = document.getElementById("exp2loc").value;
+        var exp2year = document.getElementById("exp2year").value;
+
+        var exp3com = document.getElementById("exp3com").value;
+        var exp3loc = document.getElementById("exp3loc").value;
+        var exp3year = document.getElementById("exp3year").value;
+    }
+</script>
+
+</body>
+</html>

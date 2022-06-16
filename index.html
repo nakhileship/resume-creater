@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content=
+	"width=device-width,initial-scale=1.0">
+
+	<!-- CSS only -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+		integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+		crossorigin="anonymous" rel="stylesheet">
+
+	<!-- Html2Pdf -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.8.1/html2pdf.bundle.min.js"
+		integrity="sha512vDKWohFHe2vkVWXHp3tKvIxxXg0pJxeid5eo+UjdjME3DBFBn2F8yWOE0XmiFcFbXxrEOR1JriWEno5Ckpn15A=="
+		crossorigin="anonymous">
+	</script>
+
+	<style>
+		.heading{
+		text-align: center;
+		color: #2F8D46;
+		}
+	</style>
+</head>
+
+<body>
+	<h1 class="heading">
+	Resume Builders
+	</h1>
+
+	<!-- Form encrypted as text -->
+	<form id ="form-print" enctype="text/plain"
+		class="form-control">
+
+		<label for="name">
+		<strong>Name: </strong>
+		</label>
+		<input class="form-control" type="text"
+		id="name" name="Name" placeholder="Enter Name">
+		<br>
+
+		<label for="age">
+		<strong>Enter Age: </strong>
+		</label>
+		<input class="form-control" type="text"
+		id="age" name="Age" placeholder="Enter Age">
+		<br>
+
+		<label for="subject">
+		<strong>Select Subject: </strong>
+		</label>
+		<select class="form-control"
+			id="subject" name="subject">
+			<option value="Web">
+				Web development
+			</option>
+			<option value="App">
+				App development
+			</option>
+			<option value="Others">
+				Others
+			</option>
+		</select>
+		<br>
+		
+		<label for="message">
+		<strong>Enter Message </strong>
+		</label>
+		<textarea class= "form-control"
+		id="message" name="message"
+		placeholder="Enter you message"
+		style="height:100px">
+		</textarea>
+		<br>
+
+		<input type="button" class="btn btn-primary"
+		onclick="GeneratePdf();" value="GeneratePdf">
+	</form>
+
+    
+<div class="container">
+    <form class="row g-3">
+        <div class="col-md-6">
+          <label for="inputEmail4" class="form-label">Nam</label>
+          <input type="email" class="form-control" id="inputEmail4">
+        </div>
+        <div class="col-md-6">
+          <label for="inputPassword4" class="form-label">Password</label>
+          <input type="password" class="form-control" id="inputPassword4">
+        </div>
+        <div class="col-12">
+          <label for="inputAddress" class="form-label">Address</label>
+          <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+        </div>
+        <div class="col-12">
+          <label for="inputAddress2" class="form-label">Address 2</label>
+          <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+        </div>
+        <div class="col-md-6">
+          <label for="inputCity" class="form-label">City</label>
+          <input type="text" class="form-control" id="inputCity">
+        </div>
+        <div class="col-md-4">
+          <label for="inputState" class="form-label">State</label>
+          <select id="inputState" class="form-select">
+            <option selected>Choose...</option>
+            <option>...</option>
+          </select>
+        </div>
+        <div class="col-md-2">
+          <label for="inputZip" class="form-label">Zip</label>
+          <input type="text" class="form-control" id="inputZip">
+        </div>
+        <div class="col-12">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="gridCheck">
+            <label class="form-check-label" for="gridCheck">
+              Check me out
+            </label>
+          </div>
+        </div>
+        <div class="col-12">
+          <button type="submit" class="btn btn-primary">Sign in</button>
+        </div>
+      </form>
+
+</div>
+
+<!-- edu -->
+<section class="section">
+    <h1>Education Details :</h1>
+    <select onclick="educchanger()" id="dropdownedu" name="role" required>
+    <option disabled selected value>
+         Select your carrer
+    </option>
+    <option value="Diploma">
+         Diploma
+    </option>
+    <option value="tenth">
+         10th
+    </option>
+    <option value="plues2">
+         +2
+    </option>
+</select>
+<div id="educ1" style="display: None;">
+    <label id="name-label">College</label>
+    <input type="text" id="edu1cname" name="name" class="form" required
+         placeholder="Insert your name"><br>
+
+    <label id="email-label">Examination Board</label>
+    <input type="text" id="edu1exam" name="email" class="form" required
+         placeholder="Insert your email"><br>
+
+    <label id="name-label">GPA</label>
+    <input type="text" id="edu1gpa" name="name" class="form" required
+         placeholder="Insert your name"><br>
+
+</div>
+<div id="educ2" style="display: None;">
+    <label id="name-label">College</label>
+    <input type="text" id="edu2cname" name="name" class="form" required
+         placeholder="Insert your name"><br>
+
+    <label id="email-label">Examination Board</label>
+    <input type="text" id="edu2exam" name="email" class="form" required
+         placeholder="Insert your email"><br>
+
+    <label id="name-label">GPA</label>
+    <input type="text" id="edu2gpa" name="name" class="form" required
+         placeholder="Insert your name"><br>
+
+</div>
+<div id="educ3" style="display: None;">
+    <label id="name-label">College</label>
+    <input type="text" id="edu3cname" name="name" class="form" required
+         placeholder="Insert your name"><br>
+
+    <label id="email-label">Examination Board</label>
+    <input type="text" id="edu3exam" name="email" class="form" required
+         placeholder="Insert your email"><br>
+
+    <label id="name-label">GPA</label>
+    <input type="text" id="edu3gpa" name="name" class="form" required
+         placeholder="Insert your name"><br>
+
+</div>
+</section>
+
+<!-- js -->
+<script>
+    function educchanger() {
+        var sl = document.getElementById("dropdownedu").selectedIndex;
+        console.log('hllo');
+        if (sl == 1) {
+            document.getElementById("educ2").style.display = "None";
+            document.getElementById("educ1").style.display = "block";
+            document.getElementById("educ3").style.display = "None";
+        }
+        if (sl == 2) {
+            document.getElementById("educ1").style.display = "None";
+            document.getElementById("educ3").style.display = "None";
+            document.getElementById("educ2").style.display = "block";
+        }
+        if (sl == 3) {
+            document.getElementById("educ1").style.display = "None";
+            document.getElementById("educ2").style.display = "None";
+            document.getElementById("educ3").style.display = "block";
+        }
+
+    }
+
+    function expchange() {
+        var sl = document.getElementById("dropdownexp").selectedIndex;
+        console.log('hllo');
+        if (sl == 1) {
+            document.getElementById("exp2").style.display = "None";
+            document.getElementById("exp1").style.display = "block";
+            document.getElementById("exp3").style.display = "None";
+        }
+        if (sl == 2) {
+            document.getElementById("exp1").style.display = "None";
+            document.getElementById("exp3").style.display = "None";
+            document.getElementById("exp2").style.display = "block";
+        }
+        if (sl == 3) {
+            document.getElementById("exp1").style.display = "None";
+            document.getElementById("exp2").style.display = "None";
+            document.getElementById("exp3").style.display = "block";
+        }
+
+    }
+
+    function pdfgenrate() {
+        var fname = document.getElementById("fname").value;
+        var lname = document.getElementById("lname").value;
+        var email = document.getElementById("email").value;
+        var phonno = document.getElementById("phonno").value;
+        var age = document.getElementById("age").value;
+        var genderredio = document.getElementById("gender");
+        var gender;
+        for (i = 0; i < genderredio.length; i++) {
+            if (genderredio[i].checked)
+                gender = genderredio[i].value;
+        }
+        console.log(fname, lname, email, phonno, age, gender)
+        var edu1cname = document.getElementById("edu1cname").value;
+        var edu1exam = document.getElementById("edu1exam").value;
+        var educ1gpa = document.getElementById("edu1gpa").value;
+
+        var edu2cname = document.getElementById("edu2cname").value;
+        var edu2exam = document.getElementById("edu2exam").value;
+        var edu2gpa = document.getElementById("edu2gpa").value;
+
+
+        var edu3cname = document.getElementById("edu3cname").value;
+        var edu3exam = document.getElementById("edu3exam").value;
+        var edu3gpa = document.getElementById("edu3gpa").value;
+
+
+        var exp1com = document.getElementById("exp1com").value;
+        var exp1loc = document.getElementById("exp1loc").value;
+        var exp1year = document.getElementById("exp1year").value;
+
+        var exp2com = document.getElementById("exp2com").value;
+        var exp2loc = document.getElementById("exp2loc").value;
+        var exp2year = document.getElementById("exp2year").value;
+
+        var exp3com = document.getElementById("exp3com").value;
+        var exp3loc = document.getElementById("exp3loc").value;
+        var exp3year = document.getElementById("exp3year").value;
+    }
+</script>
+<!-- js -->
+
+				
+	<script>		
+		// Function to GeneratePdf
+		function GeneratePdf() {
+			var element = document.getElementById('form-print');
+			html2pdf(element);
+		}
+	</script>
+
+	<script src=
+"https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+		integrity=
+"sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+		crossorigin="anonymous">
+	</script>
+</body>
+
+</html>
